@@ -178,7 +178,7 @@ a {
     /* max-width: 680px;
     width: calc(100% - 60px);
     min-width: 320px; */
-    width: fit-content;
+    width: max-content;
     position: relative;
     height: 100px;
     margin: 0 auto;
