@@ -19,7 +19,7 @@ body {
     right: 0;
     bottom: 0;
     margin: 0;
-    background-image: url(http://picture.zyuhn.top/bc.jpg);
+    background-image: url(../img/bc.jpg);
     /* background-color: pink; */
     background-color: transparent;
     background-size: cover;

@@ -9,7 +9,8 @@ githubBtn.addEventListener("click", function(){
     window.location.href = "https://github.com/Yohn-z"
 });
 noteBtn.addEventListener("click", function(){
-    window.location.href = "https://www.yuque.com/jiansi-8mwuq/pptmay"
+    // window.location.href = "https://www.yuque.com/jiansi-8mwuq/pptmay"
+    window.location.href = "http://yohn-z.cn"
 });
 baiduBtn.addEventListener("click", function(){
     let wd = document.getElementById("ms").value;
