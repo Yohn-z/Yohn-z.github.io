@@ -1,8 +1,3 @@
----
-
-
-## tags: [html]
-
 有时，img标签中的src图片加载失败，原来的图片位置会出现一个碎片图标。
 
 ![](http://oss.yohn-z.cn/myblog/%E4%B8%83%E7%89%9B%E4%BA%91%E4%BD%BF%E7%94%A8/20200124022314-879825.png#alt=img)

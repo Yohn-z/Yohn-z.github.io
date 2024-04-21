@@ -1,8 +1,3 @@
----
-
-
-## tags: [gulp]
-
 进入指定文件夹使用npm下载gulp `npm install gulp`
 
 创建目录结构

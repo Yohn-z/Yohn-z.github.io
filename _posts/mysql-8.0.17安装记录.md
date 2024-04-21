@@ -1,8 +1,3 @@
----
-
-
-## tags: MySql
-
 ### 一、安装MySql
 
 原来的mysql5.5出故障了，所以决定换一个mysql版本的软件

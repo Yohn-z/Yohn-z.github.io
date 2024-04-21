@@ -1,8 +1,3 @@
----
-
-
-## title: 使用Jekyll在Github上搭建个人博客tags: [github, jekyll]
-
 ### 一、Github Pages的使用
 
 **1、注册一个github账户**
