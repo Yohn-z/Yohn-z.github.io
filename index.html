@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="Cache-Control" content="no-siteapp">
-    <link rel="icon" href="icon/64.png" sizes="192x192" />
-    <link rel="apple-touch-icon-precomposed" href="icon/z.svg" />
-    <meta name="msapplication-TileImage" content="icon/z.svg" />
-    <link rel="shortcut icon" href="icon/z.svg" />
+    <!--网站图标-->
+    <link rel="icon" href="./favicon.svg" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="./favicon.svg" />
+    <meta name="msapplication-TileImage" content="./favicon.svg" />
+    <link rel="shortcut icon" href="./favicon.svg" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -20,37 +21,65 @@
     <!--QQ强制全屏-->
     <meta name="x5-page-mode" content="app">
     <!--QQ应用模式-->
-    <title>Yohn-Z | 搜索</title>
+    <title>Yohn-Z | 探索</title>
     <link href="css/index.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/monstr.css" rel="stylesheet">
 </head>
 
 <body>
     <div id="content">
-        <div class="con">
-            <div class="tit">  
+        <div class="main">
+            <div class="title">  
               <p>Yohn-Z</p>
               <div class="monstr"><div class="eye"><div class="eyeBall"></div></div><div class="mouth"></div></div>
               <div class="monstr blue"><div class="eye"><div class="eyeBall"></div></div><div class="mouth"></div>
             </div>
             </div>
-            <div class="sou">
-                <form action="https://www.google.com/search?hl=zh" method="get" target="_self">
-                    <input id="ms" class="wd" type="text" placeholder="请输入搜索内容" name="q" x-webkit-speech lang="zh-CN">
-                    <button style="color: black;">
-                      <svg t="1516004454293" style="display: flex;align-items: center;justify-content: center;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1920" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30"><defs><style type="text/css"></style></defs><path d="M711.703273 678.795636l165.841454 165.841455a23.249455 23.249455 0 1 1-32.907636 32.907636l-165.841455-165.841454A324.561455 324.561455 0 0 1 465.454545 791.272727c-179.944727 0-325.818182-145.873455-325.818181-325.818182S285.509818 139.636364 465.454545 139.636364s325.818182 145.873455 325.818182 325.818181c0 81.594182-29.998545 156.183273-79.569454 213.341091zM465.454545 744.727273c154.228364 0 279.272727-125.044364 279.272728-279.272728S619.682909 186.181818 465.454545 186.181818 186.181818 311.226182 186.181818 465.454545s125.044364 279.272727 279.272727 279.272728z" fill="#999999" p-id="1921"></path></svg>
-                    </button>
-                </form>
+            <div class="search">
+                <div class="form">
+                    <div class="search-group">
+                        <button id="select" class="select-btn">
+                            <i style="background-image: url(icon/google.svg);"></i>
+                        </button>
+                        <input class="search-input" type="text" placeholder="请输入搜索内容" name="q" x-webkit-speech lang="zh-CN">
+                        <button class="search-btn">
+                            <i style="background-image: url(icon/search.svg);"></i>
+                        </button>
+                    </div>
+                    <div class="search-select">
+                        <div class="search-select-main">
+                            <div>
+                                <button class="search-select-btn">
+                                    <i style="background-image: url(icon/baidu.svg);"></i>
+                                </button>
+                                <p>百度</p>
+                            </div>
+                            <div>
+                                <button class="search-select-btn">
+                                    <i style="background-image: url(icon/biyin.svg);"></i>
+                                </button>
+                                <p>必应</p>
+                            </div>
+                            <div>
+                                <button class="search-select-btn">
+                                    <i style="background-image: url(icon/google.svg);"></i>
+                                </button>
+                                <p>谷歌</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <ul>
-                    <li id="google" target="_blank"><i style="background-image: url(icon/g.svg);"></i><p>Google</p></li>
-                    <li id="baidu" target="_blank"><i style="background-image: url(icon/baidu.svg);"></i><p>百度一下</p></li>
-                    <li id="note" target="_blank"><i style="background-image: url(icon/note.svg);"></i><p>我的博客</p></li>
+                    <li id="juejin" target="_blank"><i style="background-image: url(icon/juejin.svg);"></i><p>稀土掘金</p></li>
+                    <li id="yuque" target="_blank"><i style="background-image: url(icon/yuque.svg);"></i><p>我的语雀</p></li>
+                    <li id="blog" target="_blank"><i style="background-image: url(icon/blog.svg);"></i><p>我的博客</p></li>
                     <li id="github" target="_blank"><i style="background-image: url(icon/github.svg);"></i><p>Github</p></li>
                 </ul>
             </div>
         </div>
-        <div class="foot">© 2020 by <a style="color:#999" target="_blank" href="http://yohn-z.cn/">Yohn-z</a> | <a rel="nofollow" style="color:#999" href="http://www.beian.miit.gov.cn" target="_blank">苏ICP备2024072859号</a>  </p></div>
+        <div class="foot">© 2020 by <a style="color:#999" target="_blank" href="http://yohn-z.cn/">Yohn-Z</a> | <a rel="nofollow" style="color:#999" href="http://www.beian.miit.gov.cn" target="_blank">苏ICP备2024072859号</a>  </p></div>
     </div>
 </body>
 <script src="./js/index.js"></script>
-
 </html>

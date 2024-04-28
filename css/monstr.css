@@ -1,0 +1,86 @@
+
+.monstr{
+    height:50px;
+    width:55px;
+    background-color:#F06754;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    border-radius: 10px;
+    margin-left:10px;
+    box-shadow: 0px 10px 10px 0px rgba(110,110,110, 0.3);
+    position: relative;
+    animation: jumping 0.8s infinite alternate;
+    float: left;
+}
+.monstr.blue{
+    background-color: #074177;
+    animation-delay: 0.5s;
+}
+.monstr::after,.monstr::before{
+    content:"";
+    height: 10px;
+    width: 20%;
+    background-color: white;
+    display: block;
+    border-radius: 10px;
+    position: absolute;
+    top:-10px;
+    
+}
+.monstr::before{
+    right: 45%;
+    transform: rotate(30deg);
+}
+.monstr::after{
+    left: 45%;
+    transform: rotate(-30deg);
+}
+.monstr .eye{
+    height: 42%;
+    width: 42%;
+    border-radius: 50%;
+    background-color:white;
+    display:flex;
+    /* 水平 */
+    justify-content:center;
+    /* 垂直 */
+    align-items:center;
+}
+.monstr .eye .eyeBall{
+    height: 50%;
+    width: 50%;
+    border-radius: 50%;
+    background-color: #074177;
+    animation: eyemove 1.6s infinite alternate;
+}
+.monstr .month{
+    height: 10%;
+    width: 30px;
+    margin-top:10px;
+    border-radius: 3px;
+    background-color:white;
+}
+.monstr.blue .eyeBall,
+.monstr.blue .month{
+    background-color: #e55a54;
+}
+@keyframes jumping{
+    50%{
+        top: 0px;
+        box-shadow: 0px 10px 10px 0px rgba(110,110,110, 0.3);
+    }
+    100%{
+        top: -50px;
+        box-shadow: 0px 120px 10px 0px rgba(110,110,110, 0.2);
+    }
+}
+@keyframes eyemove{
+    0%,10%{
+        transform: translateX(-50%);
+    }
+    90%,100%{
+        transform: translate(50%);
+    }
+}

@@ -1,2 +1,2 @@
 # Yohn-z.github.io
-我的个人博客
+个人搜索页
