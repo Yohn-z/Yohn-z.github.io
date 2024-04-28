@@ -25,6 +25,26 @@
     <link href="css/index.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/monstr.css" rel="stylesheet">
+    <script>
+        // 定义搜索方式Map
+        var searchTypeMap = {
+            biyin: {
+                icon: "url(icon/biyin.svg)",
+                url: "https://bing.com/search?",
+                name: 'q'
+            },
+            baidu: {
+                icon: "url(icon/baidu.svg)",
+                url: "https://www.baidu.com/s?",
+                name: 'wd'
+            },
+            google: {
+                icon: "url(icon/google.svg)",
+                url: "https://www.google.com/search?hl=zh",
+                name: 'q'
+            },
+        };
+    </script>
 </head>
 
 <body>
@@ -38,31 +58,31 @@
             </div>
             <div class="search">
                 <div class="form">
-                    <div class="search-group">
-                        <button id="select" class="select-btn">
-                            <i style="background-image: url(icon/google.svg);"></i>
+                    <form class="search-group" action="https://bing.com/search" method="get" target="_blank">
+                        <button id="select" type="button" class="select-btn">
+                            <i style="background-image: url(icon/biyin.svg);"></i>
                         </button>
                         <input class="search-input" type="text" placeholder="请输入搜索内容" name="q" x-webkit-speech lang="zh-CN">
-                        <button class="search-btn">
-                            <i style="background-image: url(icon/search.svg);"></i>
+                        <button class="search-btn" >
+                            <i style="background-image: url(icon/search.svg)"></i>
                         </button>
-                    </div>
+                    </form>
                     <div class="search-select">
                         <div class="search-select-main">
                             <div>
-                                <button class="search-select-btn">
+                                <button class="search-select-btn" data-id="baidu">
                                     <i style="background-image: url(icon/baidu.svg);"></i>
                                 </button>
                                 <p>百度</p>
                             </div>
                             <div>
-                                <button class="search-select-btn">
+                                <button class="search-select-btn" data-id="biyin">
                                     <i style="background-image: url(icon/biyin.svg);"></i>
                                 </button>
                                 <p>必应</p>
                             </div>
                             <div>
-                                <button class="search-select-btn">
+                                <button class="search-select-btn" data-id="google">
                                     <i style="background-image: url(icon/google.svg);"></i>
                                 </button>
                                 <p>谷歌</p>

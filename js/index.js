@@ -1,7 +1,18 @@
-// 获取body元素
-let body = document.body;
+var searchType = localStorage.getItem("searchType");
+if (searchType === null) {
+  searchType = "biyin";
+  localStorage.setItem("searchType", searchType);
+}
 
-// 为body元素添加事件监听器
+document.getElementById("select").getElementsByTagName("i")[0].style[
+  "background-image"
+] = searchTypeMap[searchType].icon;
+
+document.getElementsByClassName('search-group')[0].action = searchTypeMap[searchType].url
+document.getElementsByClassName('search-input')[0].name = searchTypeMap[searchType].name
+
+// 定义搜索方式列表显示与隐藏事件
+let body = document.body;
 body.addEventListener("click", function (event) {
   let target = event.target;
   let clickedElementId;
@@ -14,19 +25,33 @@ body.addEventListener("click", function (event) {
     target = target.parentNode;
   }
   let element = document.getElementsByClassName("search-select")[0];
-  if (clickedElementId === "select") {
+  if (
+    clickedElementId === "select" ||
+    event.target.className === "search-select-main"
+  ) {
     element.style.display = "flex";
   } else {
     element.style.display = "none";
   }
 });
 
-// 定义搜索方式按钮事件
-let selectBtn = document.getElementById("select");
-selectBtn.addEventListener("click", function () {
-  let element = document.getElementsByClassName("search-select")[0];
-  element.style.display = "flex";
-});
+// 定义搜索方式切换事件
+let searchSelectBtns = document.getElementsByClassName("search-select-btn");
+for (let i = 0; i < searchSelectBtns.length; i++) {
+  searchSelectBtns[i].addEventListener("click", function (event) {
+    let iconImg =
+      searchSelectBtns[i].getElementsByTagName("i")[0].style[
+        "background-image"
+      ];
+    document.getElementById("select").getElementsByTagName("i")[0].style[
+      "background-image"
+    ] = iconImg;
+    searchType = searchSelectBtns[i].dataset.id;
+    localStorage.setItem("searchType", searchSelectBtns[i].dataset.id);
+    document.getElementsByClassName('search-group')[0].action = searchTypeMap[searchType].url
+    document.getElementsByClassName('search-input')[0].name = searchTypeMap[searchType].name
+  });
+}
 
 // 定义导航按钮事件
 let juejinBtn = document.getElementById("juejin");
